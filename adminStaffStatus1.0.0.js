@@ -19,19 +19,19 @@ registerPlugin({
         },
         {
             name: 'countReplacer',
-            title: 'Aşağıdaki sözcük / karakterler sunucu grubundaki çevrimiçi istemcilerin miktarı ile değiştirilecektir',
+            title: '!adminCount! Sunucu grubundaki kaç kişinin çevrimiçi olduğunu sayı ile gösterir.',
             indent: 1,
             type: 'string',
         },
         {
             name: 'listReplacer',
-            title: 'The following word/characters will be replaced with a list of online clients in the servergroup.',
+            title: '!adminList! Sunucu grubundaki çevrimiçi kişileri listeler.',
             indent: 1,
             type: 'string'
         },
 		{
             name: 'statusReplacer',
-            title: 'Aşağıdaki kelime / karakterler grubun durumuyla değiştirilecektir (çevrimiçi / çevrimdışı)',
+            title: '!adminStatus! Sunucu grubunun Çevrimiçi/Çevrimdışı olduğunu gösterir.',
             indent: 1,
             type: 'string'
         }
@@ -60,12 +60,12 @@ registerPlugin({
     },
     {
         name: 'channelName',
-        title: 'Ayarlamak istediğiniz Kanal adını giriniz. (Burada yer tutucularınızı ekleyebilir / kullanabilirsiniz)',
+        title: '!adminStatus! !adminCount! / kullanabilirsiniz)',
         type: 'string'
     },
     {
         name: 'channelDescription',
-        title: 'Ayarlamak istediğiniz Kanal Açıklamasını girin. (Burada yer tutucularınızı yerleştirebilir / kullanabilirsiniz)',
+        title: '!adminStatus! !adminCount! !adminList! / kullanabilirsiniz)',
         type: 'multiline'
     }
 ]
@@ -92,8 +92,8 @@ registerPlugin({
              online = '[b][color=green] Çevrimiçi [/color]';
         }
         else {
-             offline = 'offline';
-             online = 'online';
+             offline = 'Çevrimdışı';
+             online = 'Çevrimiçi';
         };
             var allUserCount = backend.getClients().length;                           //%allUserCount%
             /*-----------------------------------------------------------------------------------------------------------*/;
