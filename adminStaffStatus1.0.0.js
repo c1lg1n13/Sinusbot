@@ -99,12 +99,12 @@ registerPlugin({
             /*-----------------------------------------------------------------------------------------------------------*/;
        if (backend.getChannelByID(config.Channel).name() != replaceChannelName(config.channelName)) {
 			backend.getChannelByID(config.Channel).setName(replaceChannelName(config.channelName)),
-			backend.getChannelByID(config.Channel).setTopic('made by Everlike <admin@everlike.de> ; everlike.de')
+			backend.getChannelByID(config.Channel).setTopic('[ .:DreamsGaming:. ]')
 	   }
 	   
 	   if (backend.getChannelByID(config.Channel).description() != replaceDescription(config.channelDescription)) {
 		 	backend.getChannelByID(config.Channel).setDescription(replaceDescription(config.channelDescription)),
-			backend.getChannelByID(config.Channel).setTopic('made by Everlike <admin@everlike.de> ; everlike.de')  
+			backend.getChannelByID(config.Channel).setTopic('[ .:DreamsGaming:. ]')  
 	   }
     });
    
