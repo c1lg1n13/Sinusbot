@@ -1,6 +1,6 @@
 registerPlugin({
    
-    name: 'adminStaffStatus',
+    name: 'StaffGoster',
     version: '1.0.0',
     description: 'Açık olan sunucu sahibi ve adminleri gösterir.',
     author: 'COSMOS',
