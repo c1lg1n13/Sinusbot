@@ -2,24 +2,24 @@ registerPlugin({
    
     name: 'adminStaffStatus',
     version: '1.0.0',
-    description: 'Sets the online Admins or Moderators to channel name and or description.',
-    author: 'Everlike <admin@everlike.de>',
+    description: 'Açık olan sunucu sahibi ve adminleri gösterir.',
+    author: 'COSMOS',
    
     vars: [
 {
     name: 'serverGroupsTC',
-    title: 'Add Servergroups you want to get information from.',
+    title: 'Bilgi almak istediğiniz Sunucu gruplarını ekleyin.',
     type: 'array',
     vars: [
         {
             name: 'serverGroupID',
-            title: 'Enter a servergroup-ID of a servergroup you want to get information from.',
+            title: 'Bilgi almak istediğiniz sunucu grubunun sunucu grup kimliğini girin.',
             indent: 1,
             type: 'string',
         },
         {
             name: 'countReplacer',
-            title: 'The following word/characters will be replaced with the amount of online clients in the servergroup.',
+            title: 'Aşağıdaki sözcük / karakterler sunucu grubundaki çevrimiçi istemcilerin miktarı ile değiştirilecektir',
             indent: 1,
             type: 'string',
         },
@@ -31,7 +31,7 @@ registerPlugin({
         },
 		{
             name: 'statusReplacer',
-            title: 'The following word/characters will be replaced with the status of the group (online/offline)',
+            title: 'Aşağıdaki kelime / karakterler grubun durumuyla değiştirilecektir (çevrimiçi / çevrimdışı)',
             indent: 1,
             type: 'string'
         }
@@ -40,32 +40,32 @@ registerPlugin({
    
      {
     name: 'ignoreUsers',
-    title: 'Ignore Users (Enter UIDs of the users you want to ignore)',
+    title: 'Kullanıcıları Yoksay (Göz ardı etmek istediğiniz kullanıcıların UID lerini girin)',
     type: 'multiline'
     },
     {
     name: 'Channel',
-    title: 'Channel you want to set the information as title/description',
+    title: 'Başlık Bilgileri / açıklama olarak ayarlamak istediğiniz kanal',
     type: 'channel'
     },
 		        {
         name: 'coloration',
-        title: 'Do you want "offline" colored red and "online colored green in the channel description?',
+        title: 'Kanal açıklamasında "çevrimdışı" renkli kırmızı ve "çevrimiçi renkli yeşil" ister misiniz?',
         type: 'select',
-        placeholder: 'yes',
+        placeholder: 'EVET',
         options: [
-        'yes',
-        'no'
+        'EVET',
+        'HAYIR'
         ]
     },
     {
         name: 'channelName',
-        title: 'Enter the Channelname you want to set. (Here you can insert/use your placeholders)',
+        title: 'Ayarlamak istediğiniz Kanal adını giriniz. (Burada yer tutucularınızı ekleyebilir / kullanabilirsiniz)',
         type: 'string'
     },
     {
         name: 'channelDescription',
-        title: 'Enter the Channel Description you want to set. (Here you can insers/use your placeholders)',
+        title: 'Ayarlamak istediğiniz Kanal Açıklamasını girin. (Burada yer tutucularınızı yerleştirebilir / kullanabilirsiniz)',
         type: 'multiline'
     }
 ]
@@ -88,8 +88,8 @@ registerPlugin({
 		
        
         if (config.coloration == 0) {
-             offline = '[b][color=red] offline [/color]';
-             online = '[b][color=green] online [/color]';
+             offline = '[b][color=red] Çevrimdışı [/color]';
+             online = '[b][color=green] Çevrimiçi [/color]';
         }
         else {
              offline = 'offline';
